@@ -3,8 +3,10 @@ const request = require('supertest');
 var {app} = require('./../server/server.js');
 var {Todo} = require('./../server/Models/Todo');
 
-beforeEach((done) => {
-  Todo.remove({}).then(() => done());
+beforeEach(function (done) {
+  Todo.remove({}).then(function() {
+    done(); 
+  });
 });
 
 
