@@ -1,7 +1,7 @@
 const expect = require('expect');
 const request = require('supertest');
 var {app} = require('./../server/server.js');
-var {Todo} = require('./../server/models/Todo');
+var {Todo} = require('./../server/Models/Todo');
 
 beforeEach((done) => {
   Todo.remove({}).then(() => done());
